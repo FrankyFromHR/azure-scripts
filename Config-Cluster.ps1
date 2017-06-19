@@ -7,9 +7,6 @@ param (
 [parameter(Mandatory=$true,position=5)][SecureString]$localAdminPassword
 )
 
-
-$vmOneName = $vmOneName + ".pclinc.network.ads"
-$vmTwoName = $vmTwoName + ".pclinc.network.ads"
 $vmOneLocalAdmin = "admin" + $vmOneName
 $vmTwoLocalAdmin = "admin" + $vmTwoName
 $vmOneCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $vmOneLocalAdmin, $localAdminPassword
